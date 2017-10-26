@@ -11,7 +11,7 @@
 /* #undef _ELIX_LEVEL */
 
 /* Newlib version */
-#define _NEWLIB_VERSION "2.2.0"
+#include <_newlib_version.h>
 
 /* C99 formats support (such as %a, %zu, ...) in IO functions like
  * printf/scanf enabled */
@@ -62,12 +62,6 @@
 /* True if long double supported and it is equal to double.  */
 #define _LDBL_EQ_DBL 1
  
-/* Define if uintptr_t is unsigned long on this architecture */
-/* #undef _UINTPTR_EQ_ULONG */
-
-/* Define if uintptr_t is unsigned long long on this architecture */
-/* #undef _UINTPTR_EQ_ULONGLONG */
-
 /* Define if ivo supported in streamio.  */
 #define _FVWRITE_IN_STREAMIO 1
 
@@ -88,6 +82,9 @@
 
 /* Define if small footprint nano-formatted-IO implementation used.  */
 /* #undef _NANO_FORMATTED_IO */
+
+/* Define if using retargetable functions for default lock routines.  */
+#define _RETARGETABLE_LOCKING 1
 
 /*
  * Iconv encodings enabled ("to" direction)
